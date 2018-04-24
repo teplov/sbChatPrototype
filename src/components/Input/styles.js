@@ -3,7 +3,8 @@ import { StyleSheet, css } from 'aphrodite';
 const styles = StyleSheet.create({
   input: {
     border: '1px solid #eee',
-    flex: 1
+    flex: 1,
+    lineHeight: '30px'
   },
   inputDiv: {
     //borderTop: "2px solid #ccc",
