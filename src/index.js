@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Window from './components/Window';
+import Container from './container';
 import { ChatIcons } from './components/Icon';
 
 const styles = {
@@ -11,7 +11,7 @@ const styles = {
 const App = () => (
   <div style={styles}>
     <ChatIcons />
-    <Window headerTitle="Chat title" />
+    <Container headerTitle="Chat title" />
   </div>
 );
 

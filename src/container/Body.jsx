@@ -1,7 +1,7 @@
-import React from "react";
-import { styles, css } from "./styles.js";
+import React from 'react';
+import { styles, css } from './styles.js';
 
-export default class WindowBody extends React.Component {
+export default class Body extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;

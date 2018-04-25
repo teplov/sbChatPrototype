@@ -1,6 +1,6 @@
 {
-  "name": "Window",
+  "name": "theme",
   "version": "0.0.1",
   "private": true,
-  "main": "./Window.jsx"
+  "main": "./theme.js"
 }
