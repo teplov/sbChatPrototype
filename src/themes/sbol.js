@@ -33,14 +33,33 @@ let theme = StyleSheet.create({
   body: {
     borderLeft: '2px solid green',
     borderRight: '2px solid green'
+  },
+
+  footer: {
+    borderTop: '1px inset #eee',
+    borderLeft: '2px solid green',
+    borderRight: '2px solid green',
+    borderBottom: '2px solid green'
   }
 });
 
-const theme_ld = StyleSheet.create({});
+const theme_ld = StyleSheet.create({
+  window: {
+    maxHeight: '90vh',
+    minHeight: '500px',
+    position: 'fixed',
+    bottom: '5px',
+    right: '20px'
+  }
+});
 
 const theme_md = StyleSheet.create({
   window: {
-    height: '100vh'
+    position: 'fixed',
+    height: 'auto',
+    top: '5px',
+    bottom: '5px',
+    right: '5px'
   }
 });
 
