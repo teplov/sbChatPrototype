@@ -7,8 +7,8 @@ export default class Footer extends React.Component {
   render() {
     return (
       <div className={css(styles.footer)}>
-        <Input placeholder="Enter your text here..." maxHeight="" />
-        <Button text="Send" sign="send1" color="green" size="30" />
+        <Input placeholder="Enter your text here..." maxHeight="50" />
+        <Button text="Send" sign="send" color="green" size="30" />
       </div>
     );
   }

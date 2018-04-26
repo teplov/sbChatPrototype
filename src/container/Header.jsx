@@ -1,5 +1,6 @@
 import React from 'react';
 import theme from '../themes';
+import Button from '../components/Button';
 import { styles, css } from './styles.js';
 
 export default class Header extends React.Component {
@@ -9,7 +10,15 @@ export default class Header extends React.Component {
   }
   render() {
     return (
-      <div className={css(styles.header, theme.header)}>{this.props.title}</div>
+      <div className={css(styles.header, theme.header)}>
+        <Button
+          sign="speechBubbles"
+          color="white"
+          size="20"
+          themeStyle={theme.headerIcon}
+        />
+        {this.props.title}
+      </div>
     );
   }
 }

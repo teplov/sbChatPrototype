@@ -11,7 +11,7 @@ const styles = {
 const App = () => (
   <div style={styles}>
     <ChatIcons />
-    <Container headerTitle="Chat title" />
+    <Container headerTitle="Сбербанк" />
   </div>
 );
 

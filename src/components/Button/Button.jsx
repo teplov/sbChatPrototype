@@ -18,7 +18,8 @@ export default class Button extends React.Component {
       <button
         className={css(
           styles.button,
-          this.props.sign ? styles.icon : styles.text
+          this.props.sign ? styles.icon : styles.text,
+          this.props.themeStyle
         )}
       >
         <Icon
