@@ -17,6 +17,49 @@ let theme = StyleSheet.create({
     fontSize: '2rem',
     fontWeight: '300',
     borderBottom: 'none'
+  },
+  body: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+
+  message: {
+    margin: '5px 15px',
+    display: 'flex',
+    flexGrow: 0,
+    flexShrink: 0
+  },
+
+  avatar: {
+    width: '40px',
+    height: '40px',
+    backgroundSize: '110%',
+    flexGrow: 0,
+    flexShrink: 0
+  },
+
+  bubble: {
+    padding: '10px 20px',
+    borderRadius: '10px',
+    textAlign: 'left',
+    maxWidth: '70%',
+    minWidth: '20%',
+    fontSize: '14px'
+  },
+  dir0: {
+    backgroundColor: '#F2F2F2'
+  },
+  dir1: {
+    backgroundColor: '#404040',
+    color: '#EEE',
+    fontFamily: 'OpenSans, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.43',
+    letterSpacing: 'normal',
+    textAlign: 'left',
+    marginLeft: 'auto'
   }
 });
 const theme_ld = StyleSheet.create({});

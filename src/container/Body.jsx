@@ -1,9 +1,10 @@
-import React from "react";
-import theme from "../themes";
-import Bubble from "../components/Bubble";
-import { styles, css } from "./styles.js";
+import React from 'react';
+import theme from '../themes';
+import { config } from '../config.js';
+import Message from './Message';
+import { styles, css } from './styles.js';
 
-import chat from "/data/conversation.js";
+import chat from '/data/conversation.js';
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -13,11 +14,7 @@ export default class Body extends React.Component {
 
   getChat() {
     return chat.map(item => (
-      <Bubble
-        themeStyle={[theme.bubble, theme["dir" + item.dir]]}
-        dir={item.dir}
-        text={item.text}
-      />
+      <Message dir={item.dir} text={item.text} avatar={config.avatar} />
     ));
   }
 
