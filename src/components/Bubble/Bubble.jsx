@@ -1,5 +1,5 @@
-import React from "react";
-import { styles, css } from "./styles.js";
+import React from 'react';
+import { styles, css } from './styles.js';
 
 export default class Bubble extends React.Component {
   constructor(props) {
@@ -12,11 +12,11 @@ export default class Bubble extends React.Component {
       <div
         className={css(
           styles.bubble,
-          styles["dir" + this.props.dir],
+          styles['dir' + this.props.dir],
           this.props.themeStyle
         )}
       >
-        {this.props.text}
+        {this.props.children}
       </div>
     );
   }

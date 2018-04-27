@@ -30,6 +30,11 @@ let theme = StyleSheet.create({
     flexShrink: 0
   },
 
+  operatorTitle: {
+    fontWeight: 'bold',
+    marginBottom: '5px'
+  },
+
   avatar: {
     width: '40px',
     height: '40px',
@@ -42,7 +47,7 @@ let theme = StyleSheet.create({
     padding: '10px 20px',
     borderRadius: '10px',
     textAlign: 'left',
-    maxWidth: '70%',
+    maxWidth: '65%',
     minWidth: '20%',
     fontSize: '14px'
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import theme from '../themes';
 import Bubble from '../components/Bubble';
+import Title from '../components/Title';
 import Avatar from '../components/Avatar';
 import { styles, css } from './styles.js';
 
@@ -19,8 +20,12 @@ export default class Message extends React.Component {
         <Bubble
           themeStyle={[theme.bubble, theme['dir' + this.props.dir]]}
           dir={this.props.dir}
-          text={this.props.text}
-        />
+        >
+          {!this.props.dir && (
+            <Title text="Василиса" themeStyle={theme.operatorTitle} />
+          )}
+          {this.props.text}
+        </Bubble>
       </div>
     );
   }

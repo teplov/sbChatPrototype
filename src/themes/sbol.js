@@ -50,6 +50,11 @@ let theme = StyleSheet.create({
     borderBottom: '2px solid green'
   },
 
+  operatorTitle: {
+    fontWeight: 'bold',
+    marginBottom: '5px'
+  },
+
   avatar: {
     backgroundSize: '110%',
     flexGrow: 0,
@@ -57,10 +62,10 @@ let theme = StyleSheet.create({
   },
 
   bubble: {
-    padding: '20px 10px',
+    padding: '10px 15px',
     borderRadius: '10px',
     textAlign: 'left',
-    maxWidth: '70%',
+    maxWidth: '60%',
     minWidth: '20%',
     fontSize: '0.9rem'
   },
