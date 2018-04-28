@@ -3,6 +3,7 @@ import theme from '../themes';
 import Button from '../components/Button';
 import Input, { InputDiv } from '../components/Input';
 import { styles, css } from './styles.js';
+import { config } from '../config.js';
 
 import store from '../store';
 
@@ -17,9 +18,13 @@ export default class Footer extends React.Component {
         />
         <Button
           text="Send"
-          sign="send"
-          color={store.getState() ? 'green' : '#ccc'}
-          size="30"
+          sign={config[config.theme].sendButtonSign}
+          color={
+            store.getState()
+              ? config[config.theme].primaryColor
+              : config[config.theme].disabledColor
+          }
+          size={config[config.theme].sendButtonSize}
         />
       </div>
     );

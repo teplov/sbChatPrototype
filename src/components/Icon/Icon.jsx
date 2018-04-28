@@ -36,15 +36,17 @@ export class ChatIcons extends React.Component {
             />
           </g>
         </symbol>
-        <symbol id="send">
+        <symbol id="sendArrow">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-            <circle
-              id="Oval"
+            <polygon
               fill="currentColor"
-              cx="12.5"
-              cy="12.5"
-              r="12.5"
+              points="15.6189331 10.9050384 0 10.9050384 0 8.82648498 15.3996036 8.82648498 9.28037783 1.33606838 10.8305935 0 19 10 10.8305935 20 9.28037783 18.6639316"
             />
+          </g>
+        </symbol>
+        <symbol id="sendRound">
+          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <circle fill="currentColor" cx="12.5" cy="12.5" r="12.5" />
             <path
               d="M12.5,6.41176471 L12.5,19.5882353"
               stroke="#FFFFFF"
@@ -152,7 +154,19 @@ export default class Icon extends React.Component {
             <use xlinkHref={'#' + sign} />
           </svg>
         );
-      case 'send':
+      case 'sendArrow':
+        return (
+          <svg
+            viewBox="0 0 19 20"
+            style={{ fill: color, color: color }}
+            //className={css(styles.red)}
+            width={size || 20}
+            height={size || 20}
+          >
+            <use xlinkHref={'#' + sign} />
+          </svg>
+        );
+      case 'sendRound':
         return (
           <svg
             viewBox="0 0 25 25"
@@ -225,6 +239,10 @@ export default class Icon extends React.Component {
   }
 
   render() {
-    return this.icon(this.props.sign, this.props.color, this.props.size);
+    return (
+      <div className={css(styles.icon, this.props.themeStyle)}>
+        {this.icon(this.props.sign, this.props.color, this.props.size)}
+      </div>
+    );
   }
 }

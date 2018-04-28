@@ -28,6 +28,19 @@ const styles = StyleSheet.create({
     marginRight: '10px'
   },
 
+  bubble: {
+    display: 'flex'
+  },
+
+  bubbleText: {
+    flex: 1
+  },
+
+  bubbleStatus: {
+    //flex: 0,
+    alignSelf: 'flex-end'
+  },
+
   body: {
     color: '#000',
     flex: 1,

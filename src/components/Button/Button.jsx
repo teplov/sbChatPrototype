@@ -26,6 +26,7 @@ export default class Button extends React.Component {
           sign={this.props.sign}
           color={this.props.color}
           size={this.props.size}
+          themeStyle={this.props.themeStyle}
         >
           {this.props.text}
         </Icon>

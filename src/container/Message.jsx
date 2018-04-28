@@ -1,6 +1,7 @@
 import React from 'react';
 import theme from '../themes';
 import Bubble from '../components/Bubble';
+import Icon from '../components/Icon';
 import Title from '../components/Title';
 import Avatar from '../components/Avatar';
 import { styles, css } from './styles.js';
@@ -22,13 +23,23 @@ export default class Message extends React.Component {
         )}
         <Bubble
           themeStyle={[
+            styles.bubble,
             theme.bubble,
             theme['dir' + this.props.dir],
             theme['poOne']
           ]}
           dir={this.props.dir}
         >
-          {this.props.text}
+          <div className={css(styles.bubbleText, theme.bubbleText)}>
+            {this.props.text}
+          </div>
+          {!!this.props.dir && (
+            <Icon
+              themeStyle={theme.bubbleStatus || styles.bubbleStatus}
+              sign="statusOk"
+              color="green"
+            />
+          )}
         </Bubble>
       </div>
     );
@@ -45,6 +56,7 @@ export default class Message extends React.Component {
         )}
         <Bubble
           themeStyle={[
+            styles.bubble,
             theme.bubble,
             theme['dir' + this.props.dir],
             theme['poStart'],
@@ -52,7 +64,17 @@ export default class Message extends React.Component {
           ]}
           dir={this.props.dir}
         >
-          {this.props.text}
+          <div className={css(styles.bubbleText, theme.bubbleText)}>
+            {this.props.text}
+          </div>
+          {!!this.props.dir && (
+            <Icon
+              themeStyle={theme.bubbleStatus || styles.bubbleStatus}
+              themeStyle={theme.bubbleStatus}
+              sign="statusSend"
+              color="grey"
+            />
+          )}
         </Bubble>
       </div>
     );
@@ -63,6 +85,7 @@ export default class Message extends React.Component {
       <div className={css(styles.message, theme.message, theme.messageMiddle)}>
         <Bubble
           themeStyle={[
+            styles.bubble,
             theme.bubble,
             theme['dir' + this.props.dir],
             theme['poMiddle'],
@@ -70,7 +93,17 @@ export default class Message extends React.Component {
           ]}
           dir={this.props.dir}
         >
-          {this.props.text}
+          <div className={css(styles.bubbleText, theme.bubbleText)}>
+            {this.props.text}
+          </div>
+          {!!this.props.dir && (
+            <Icon
+              themeStyle={theme.bubbleStatus || styles.bubbleStatus}
+              themeStyle={theme.bubbleStatus}
+              sign="statusError"
+              color="red"
+            />
+          )}
         </Bubble>
       </div>
     );
@@ -81,6 +114,7 @@ export default class Message extends React.Component {
       <div className={css(styles.message, theme.message, theme.messageEnd)}>
         <Bubble
           themeStyle={[
+            styles.bubble,
             theme.bubble,
             theme['dir' + this.props.dir],
             theme['poEnd'],
@@ -88,7 +122,16 @@ export default class Message extends React.Component {
           ]}
           dir={this.props.dir}
         >
-          {this.props.text}
+          <div className={css(styles.bubbleText, theme.bubbleText)}>
+            {this.props.text}
+          </div>
+          {!!this.props.dir && (
+            <Icon
+              themeStyle={theme.bubbleStatus || styles.bubbleStatus}
+              sign="statusWait"
+              color="grey"
+            />
+          )}
         </Bubble>
       </div>
     );

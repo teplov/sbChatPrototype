@@ -27,7 +27,7 @@ let theme = StyleSheet.create({
   },
 
   headerIcon: {
-    margin: '6px',
+    margin: '0 2px',
     outline: 'none',
     cursor: 'default'
   },
