@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
   },
 
   message: {
-    margin: '10px'
+    marginLeft: '10px',
+    marginRight: '10px'
   },
 
   body: {
