@@ -31,19 +31,5 @@ export default class Button extends React.Component {
         </Icon>
       </button>
     );
-
-    // if (this.props.sign) {
-    //   return (
-    //     <Icon
-    //       sign={this.props.sign}
-    //       color={this.props.color}
-    //       size={this.props.size}
-    //     />
-    //   );
-    // } else {
-    //   return <button className={css(styles.button)}>{this.props.text}</button>;
-    // }
   }
 }
-
-//export { ButtonIcon, ButtonText };

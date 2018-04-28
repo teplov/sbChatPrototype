@@ -95,7 +95,6 @@ export default class Message extends React.Component {
   }
 
   render() {
-    console.log(this.props.position);
     switch (this.props.position) {
       case 'one':
         return this.messageOne();

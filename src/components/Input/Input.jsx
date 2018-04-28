@@ -2,6 +2,8 @@ import React from 'react';
 import { styles, css } from './styles.js';
 import InputDiv from './InputDiv';
 
+import store from '../../store';
+
 export default class Input extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +16,7 @@ export default class Input extends React.Component {
           maxHeight={this.props.maxHeight}
           className={css(styles.input)}
           placeholder={this.props.placeholder}
+          onMessage={this.props.onMessage}
         />
       );
     } else {
