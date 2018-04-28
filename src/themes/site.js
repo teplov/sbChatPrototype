@@ -16,7 +16,7 @@ let theme = StyleSheet.create({
   header: {
     height: '50px',
     lineHeight: '50px',
-    fontSize: '2rem',
+    fontSize: '1.7rem',
     fontWeight: '300',
     borderBottom: 'none'
   },
@@ -24,51 +24,6 @@ let theme = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column'
   },
-
-  // message: {
-  //   margin: '5px 15px',
-  //   display: 'flex',
-  //   flexGrow: 0,
-  //   flexShrink: 0
-  // },
-
-  // operatorTitle: {
-  //   fontWeight: 'bold',
-  //   marginBottom: '5px'
-  // },
-
-  // avatar: {
-  //   width: '40px',
-  //   height: '40px',
-  //   backgroundSize: '110%',
-  //   flexGrow: 0,
-  //   flexShrink: 0
-  // },
-
-  // bubble: {
-  //   padding: '10px 20px',
-  //   borderRadius: '10px',
-  //   textAlign: 'left',
-  //   maxWidth: '65%',
-  //   minWidth: '20%',
-  //   fontSize: '14px'
-  // },
-  // dir0: {
-  //   backgroundColor: '#F2F2F2'
-  // },
-  // dir1: {
-  //   backgroundColor: '#404040',
-  //   color: '#EEE',
-  //   fontFamily: 'OpenSans, sans-serif',
-  //   fontWeight: 'normal',
-  //   fontStyle: 'normal',
-  //   fontStretch: 'normal',
-  //   lineHeight: '1.43',
-  //   letterSpacing: 'normal',
-  //   textAlign: 'left',
-  //   marginLeft: 'auto'
-  // }
-
   message: {
     margin: '0px 10px',
     display: 'flex',
@@ -175,7 +130,7 @@ const theme_md = StyleSheet.create({});
 const theme_sd = StyleSheet.create({
   window: {
     width: '100vw',
-    height: '100vh',
+    height: '100%',
     position: 'fixed',
     top: '0px',
     left: '0px',
