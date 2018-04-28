@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
+  "homepage": "https://codesandbox.io/s/l59rl0xp4m",
   "main": "src/index.js",
   "dependencies": {
     "aphrodite": "2.2.0",
