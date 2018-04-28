@@ -33,7 +33,10 @@ export default class InputDiv extends React.Component {
   }
 
   setBlur(e) {
-    this.setState({ placeholder: this.props.placeholder });
+    // восстанавливаем текст плейсхолдера только, если стейт сообщения не пустой
+    !this.state.message.length &&
+      this.setState({ placeholder: this.props.placeholder });
+    this.props.onMessage(this.state.message.length);
   }
 
   render() {
@@ -49,7 +52,8 @@ export default class InputDiv extends React.Component {
           styles.inputDiv,
           this.state.isGrowed && styles.grow
         )}
-        contentEditable="true"
+        contentEditable={true}
+        suppressContentEditableWarning={true}
         onFocus={e => this.setFocus(e)}
         onBlur={e => this.setBlur(e)}
       >
