@@ -13,6 +13,23 @@ export default class Button extends React.Component {
     found && this.setState({ isIcon: true });
   }
 
+  textButton() {
+    return this.props.text;
+  }
+
+  iconButton() {
+    return (
+      <Icon
+        sign={this.props.sign}
+        color={this.props.color}
+        size={this.props.size}
+        themeStyle={this.props.themeStyle}
+      >
+        {this.props.text}
+      </Icon>
+    );
+  }
+
   render() {
     return (
       <button
@@ -22,14 +39,7 @@ export default class Button extends React.Component {
           this.props.themeStyle
         )}
       >
-        <Icon
-          sign={this.props.sign}
-          color={this.props.color}
-          size={this.props.size}
-          themeStyle={this.props.themeStyle}
-        >
-          {this.props.text}
-        </Icon>
+        {this.props.sign ? this.iconButton() : this.textButton()}
       </button>
     );
   }

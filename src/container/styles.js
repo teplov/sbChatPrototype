@@ -32,6 +32,22 @@ const styles = StyleSheet.create({
     display: 'flex'
   },
 
+  bubbleButtons: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '10px 0px'
+  },
+
+  bubbleButton: {
+    margin: '2px',
+    border: 'none',
+    borderRadius: '20px',
+    backgroundColor: 'grey',
+    color: '#fff',
+    lineHeight: '20px',
+    fontSize: '12px'
+  },
+
   bubbleText: {
     flex: 1
   },
@@ -46,6 +62,12 @@ const styles = StyleSheet.create({
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'scroll'
+  },
+
+  suggest: {},
+
+  suggestButton: {
+    border: 'none'
   },
 
   footer: {

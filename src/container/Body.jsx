@@ -20,31 +20,31 @@ export default class Body extends React.Component {
 
       if (
         chat[prev] &&
-        chat[prev].dir !== item.dir &&
+        chat[prev].userId !== item.userId &&
         chat[next] &&
-        chat[next].dir !== item.dir
+        chat[next].userId !== item.userId
       ) {
         position = 'one';
       } else if (
-        (!chat[prev] && chat[next] && chat[next].dir === item.dir) ||
+        (!chat[prev] && chat[next] && chat[next].userId === item.userId) ||
         (chat[prev] &&
-          chat[prev].dir !== item.dir &&
+          chat[prev].userId !== item.userId &&
           chat[next] &&
-          chat[next].dir === item.dir)
+          chat[next].userId === item.userId)
       ) {
         position = 'start';
       } else if (
         chat[prev] &&
-        chat[prev].dir === item.dir &&
+        chat[prev].userId === item.userId &&
         chat[next] &&
-        chat[next].dir === item.dir
+        chat[next].userId === item.userId
       ) {
         position = 'middle';
       } else if (
         chat[prev] &&
-        chat[prev].dir === item.dir &&
+        chat[prev].userId === item.userId &&
         chat[next] &&
-        chat[next].dir !== item.dir
+        chat[next].userId !== item.userId
       ) {
         position = 'end';
       }
@@ -53,7 +53,9 @@ export default class Body extends React.Component {
           key={'message_' + index}
           dir={item.dir}
           text={item.text}
-          avatar={config.avatar}
+          name={item.operator}
+          avatar={item.avatar}
+          buttons={item.buttons}
           position={position}
         />
       );

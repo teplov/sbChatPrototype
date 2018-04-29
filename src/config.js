@@ -5,6 +5,7 @@ const config = {
   avatar:
     'https://uploads.codesandbox.io/uploads/user/2f6a626d-8b4a-4683-82bc-ba64a08d312f/Mfd5-avatar.jpg',
   displaySize: !!isMobileDevice() ? 'sd' : 'md', // ld: Desktop (large), md: Tablet (medium), sd: Mobile (small)
+  inputMaxHeight: 90,
   site: {
     primaryColor: 'black',
     secondaryColor: '#eee',
@@ -19,7 +20,7 @@ const config = {
     hoverColor: 'green',
     disabledColor: '#ccc',
     sendButtonSign: 'sendRound',
-    sendButtonSize: 30
+    sendButtonSize: 25
   }
 };
 

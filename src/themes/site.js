@@ -7,7 +7,7 @@ const avatarSize = 40;
 let theme = StyleSheet.create({
   window: {
     width: '340px',
-    height: '500px',
+    height: '600px',
     position: 'fixed',
     right: '30px',
     bottom: '60px',
@@ -75,6 +75,17 @@ let theme = StyleSheet.create({
     fontSize: '0.9rem'
   },
 
+  bubbleButton: {
+    backgroundColor: '#666',
+    borderRadius: '10px',
+    height: '32px',
+    color: '#eee',
+    fontSize: '14px',
+    ':hover': {
+      backgroundColor: '#999'
+    }
+  },
+
   poOne: {
     borderRadius: '10px'
   },
@@ -122,6 +133,28 @@ let theme = StyleSheet.create({
     letterSpacing: 'normal',
     textAlign: 'left',
     marginLeft: 'auto'
+  },
+  suggest: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  },
+
+  suggestButton: {
+    flexGrow: 1,
+    backgroundColor: '#eee',
+    borderRadius: '10px',
+    //boxShadow: '0 2px 4px rgba(0,0,0,.15)',
+    height: '32px',
+    margin: '6px',
+    minWidth: '10%',
+    color: '#333',
+    fontSize: '14px',
+    ':hover': {
+      backgroundColor: '#f3f3f3'
+    }
   }
 });
 const theme_ld = StyleSheet.create({});
@@ -140,7 +173,17 @@ const theme_sd = StyleSheet.create({
 
   message: {
     margin: '0px 15px'
-  }
+  },
+
+  suggest: {
+    display: 'inline-block',
+    height: '50px',
+    whiteSpace: 'nowrap',
+    overflowY: 'hidden',
+    overflowX: 'visible'
+  },
+
+  suggestButton: {}
 });
 
 switch (config.displaySize) {

@@ -19,7 +19,7 @@ let theme = StyleSheet.create({
     height: '35px',
     lineHeight: '35px',
     color: '#fff',
-    backgroundColor: 'green',
+    backgroundColor: '#189F29',
     borderBottom: 'none',
     borderTopLeftRadius: '6px',
     borderTopRightRadius: '6px',
@@ -33,8 +33,9 @@ let theme = StyleSheet.create({
   },
 
   body: {
-    borderLeft: '2px solid green',
-    borderRight: '2px solid green',
+    backgroundColor: '#F8F8F8',
+    borderLeft: '2px solid #189F29',
+    borderRight: '2px solid #189F29',
     display: 'flex',
     flexDirection: 'column'
   },
@@ -64,7 +65,9 @@ let theme = StyleSheet.create({
     borderTop: '1px inset #eee',
     borderLeft: '2px solid green',
     borderRight: '2px solid green',
-    borderBottom: '2px solid green'
+    borderBottom: '2px solid green',
+    borderBottomLeftRadius: '6px',
+    borderBottomRightRadius: '6px'
   },
 
   operatorTitle: {
@@ -72,7 +75,8 @@ let theme = StyleSheet.create({
     textAlign: 'left',
     textIndent: '50px',
     fontWeight: 'bold',
-    fontSize: '14px',
+    fontSize: '13px',
+    color: '#3AB968',
     marginBottom: '5px'
   },
 
@@ -89,7 +93,19 @@ let theme = StyleSheet.create({
     textAlign: 'left',
     maxWidth: '60%',
     minWidth: '20%',
-    fontSize: '0.9rem'
+    fontSize: '14px',
+    lineHeight: '19px'
+  },
+
+  bubbleButton: {
+    backgroundColor: '#2F9F13',
+    borderRadius: '4px',
+    boxShadow: '0 2px 4px rgba(0,0,0,.15)',
+    height: '32px',
+    fontSize: '14px',
+    ':hover': {
+      backgroundColor: '#3DBA1E'
+    }
   },
 
   poOne: {
@@ -126,11 +142,37 @@ let theme = StyleSheet.create({
   },
 
   dir0: {
-    backgroundColor: '#eee'
+    backgroundColor: '#E6E6E6'
   },
   dir1: {
-    backgroundColor: '#e4eee4',
+    backgroundColor: '#D6F4C9',
     marginLeft: 'auto'
+  },
+
+  suggest: {
+    backgroundColor: '#F8F8F8',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    borderLeft: '2px solid #189F29',
+    borderRight: '2px solid #189F29',
+    alignItems: 'center'
+  },
+
+  suggestButton: {
+    flexGrow: 1,
+    backgroundColor: '#ddd',
+    borderRadius: '4px',
+    //boxShadow: '0 2px 4px rgba(0,0,0,.15)',
+    height: '32px',
+    margin: '4px',
+    minWidth: '10%',
+    color: '#333',
+    fontSize: '14px',
+    ':hover': {
+      backgroundColor: '#eee'
+    }
   }
 });
 

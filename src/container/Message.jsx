@@ -1,6 +1,7 @@
 import React from 'react';
 import theme from '../themes';
 import Bubble from '../components/Bubble';
+import Button from '../components/Button';
 import Icon from '../components/Icon';
 import Title from '../components/Title';
 import Avatar from '../components/Avatar';
@@ -12,11 +13,30 @@ export default class Message extends React.Component {
     this.props = props;
   }
 
+  getButtons(buttons) {
+    console.log(buttons);
+    const bubbleButtons = buttons.map((item, index) => {
+      return (
+        <Button
+          key={'bubbleButtons_' + index}
+          text={item}
+          themeStyle={[styles.bubbleButton, theme.bubbleButton]}
+        />
+      );
+    });
+
+    return (
+      <div className={css(styles.bubbleButtons, theme.bubbleButtons)}>
+        {bubbleButtons}
+      </div>
+    );
+  }
+
   messageOne() {
     return (
       <div className={css(styles.message, theme.message, theme.messageOne)}>
         {!this.props.dir && (
-          <Title text="Василиса" themeStyle={theme.operatorTitle} />
+          <Title text={this.props.name} themeStyle={theme.operatorTitle} />
         )}
         {!this.props.dir && (
           <Avatar pic={this.props.avatar} themeStyle={theme.avatar} />
@@ -32,6 +52,7 @@ export default class Message extends React.Component {
         >
           <div className={css(styles.bubbleText, theme.bubbleText)}>
             {this.props.text}
+            {this.props.buttons && this.getButtons(this.props.buttons)}
           </div>
           {!!this.props.dir && (
             <Icon
@@ -49,7 +70,7 @@ export default class Message extends React.Component {
     return (
       <div className={css(styles.message, theme.message, theme.messageStart)}>
         {!this.props.dir && (
-          <Title text="Василиса" themeStyle={theme.operatorTitle} />
+          <Title text={this.props.name} themeStyle={theme.operatorTitle} />
         )}
         {!this.props.dir && (
           <Avatar pic={this.props.avatar} themeStyle={theme.avatar} />
@@ -66,6 +87,7 @@ export default class Message extends React.Component {
         >
           <div className={css(styles.bubbleText, theme.bubbleText)}>
             {this.props.text}
+            {this.props.buttons && this.getButtons(this.props.buttons)}
           </div>
           {!!this.props.dir && (
             <Icon
@@ -95,6 +117,7 @@ export default class Message extends React.Component {
         >
           <div className={css(styles.bubbleText, theme.bubbleText)}>
             {this.props.text}
+            {this.props.buttons && this.getButtons(this.props.buttons)}
           </div>
           {!!this.props.dir && (
             <Icon
@@ -124,6 +147,7 @@ export default class Message extends React.Component {
         >
           <div className={css(styles.bubbleText, theme.bubbleText)}>
             {this.props.text}
+            {this.props.buttons && this.getButtons(this.props.buttons)}
           </div>
           {!!this.props.dir && (
             <Icon

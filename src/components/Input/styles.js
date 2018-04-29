@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'left',
     padding: '10px',
-    lineHeight: '20px',
+    lineHeight: '30px',
     color: '#666',
     overflow: 'hidden',
     //maxHeight: '60px',
-    minHeight: '20px',
+    minHeight: '30px',
     outline: 'none'
   },
   // grow: {

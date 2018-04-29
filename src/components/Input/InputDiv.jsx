@@ -1,6 +1,8 @@
 import React from 'react';
 import { styles, css } from './styles.js';
 
+import { config } from '../../config.js';
+
 export default class InputDiv extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +25,7 @@ export default class InputDiv extends React.Component {
     this.setState({ message });
     this.props.onMessage(message.length);
 
-    inputHeight < 50
+    inputHeight < config.inputMaxHeight || 50
       ? this.setState({ isGrowed: false })
       : this.setState({ isGrowed: true });
   }
