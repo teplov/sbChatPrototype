@@ -183,7 +183,14 @@ const theme_sd = StyleSheet.create({
     overflowX: 'visible'
   },
 
-  suggestButton: {}
+  suggestButton: {
+    backgroundColor: '#fff',
+    border: '1px solid #ccc',
+    borderRadius: '32px',
+    padding: '0px 15px',
+    textAlign: 'center',
+    lineHeight: '32px'
+  }
 });
 
 switch (config.displaySize) {
