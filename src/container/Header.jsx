@@ -1,7 +1,9 @@
-import React from 'react';
-import theme from '../themes';
-import Button from '../components/Button';
-import { styles, css } from './styles.js';
+import React from "react";
+import theme from "../themes";
+import Button from "../components/Button";
+import { styles, css } from "./styles.js";
+
+import { config } from "../config.js";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -17,7 +19,19 @@ export default class Header extends React.Component {
           size="20"
           themeStyle={theme.headerIcon}
         />
-        {this.props.title}
+        {config[config.theme].headerTitle}
+        <Button
+          sign="minimize"
+          color="white"
+          size="20"
+          themeStyle={theme.headerIcon}
+        />
+        <Button
+          sign="close"
+          color="white"
+          size="20"
+          themeStyle={theme.headerIcon}
+        />
       </div>
     );
   }

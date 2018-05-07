@@ -1,10 +1,10 @@
-import React from 'react';
-import theme from '../themes';
-import { config } from '../config.js';
-import Message from './Message';
-import { styles, css } from './styles.js';
+import React from "react";
+import theme from "../themes";
+import { config } from "../config.js";
+import Message from "./Message";
+import { styles, css } from "./styles.js";
 
-import chat from '/data/conversation.js';
+import chat from "../data/conversation.js";
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Body extends React.Component {
     return chat.map((item, index) => {
       const prev = index - 1;
       const next = index + 1;
-      let position = 'one';
+      let position = "one";
 
       if (
         chat[prev] &&
@@ -24,7 +24,7 @@ export default class Body extends React.Component {
         chat[next] &&
         chat[next].userId !== item.userId
       ) {
-        position = 'one';
+        position = "one";
       } else if (
         (!chat[prev] && chat[next] && chat[next].userId === item.userId) ||
         (chat[prev] &&
@@ -32,25 +32,25 @@ export default class Body extends React.Component {
           chat[next] &&
           chat[next].userId === item.userId)
       ) {
-        position = 'start';
+        position = "start";
       } else if (
         chat[prev] &&
         chat[prev].userId === item.userId &&
         chat[next] &&
         chat[next].userId === item.userId
       ) {
-        position = 'middle';
+        position = "middle";
       } else if (
         chat[prev] &&
         chat[prev].userId === item.userId &&
         chat[next] &&
         chat[next].userId !== item.userId
       ) {
-        position = 'end';
+        position = "end";
       }
       return (
         <Message
-          key={'message_' + index}
+          key={"message_" + index}
           dir={item.dir}
           text={item.text}
           name={item.operator}

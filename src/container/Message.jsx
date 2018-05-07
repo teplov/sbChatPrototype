@@ -52,8 +52,8 @@ export default class Message extends React.Component {
         >
           <div className={css(styles.bubbleText, theme.bubbleText)}>
             {this.props.text}
-            {this.props.buttons && this.getButtons(this.props.buttons)}
           </div>
+          {this.props.buttons && this.getButtons(this.props.buttons)}
           {!!this.props.dir && (
             <Icon
               themeStyle={theme.bubbleStatus || styles.bubbleStatus}

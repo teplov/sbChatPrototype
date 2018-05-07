@@ -12,7 +12,7 @@ const styles = {
 const App = () => (
   <div style={styles}>
     <ChatIcons /> {/* загружаем компонент со всеми иконками */}
-    <Container headerTitle="Сбербанк" />
+    <Container />
   </div>
 );
 

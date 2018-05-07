@@ -32,9 +32,13 @@ const styles = StyleSheet.create({
     display: 'flex'
   },
 
+  bubbleText: {
+    margin: '10px 20px'
+  },
+
   bubbleButtons: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
+    // flexDirection: 'column',
     margin: '10px 0px'
   },
 
@@ -64,10 +68,13 @@ const styles = StyleSheet.create({
     overflowY: 'scroll'
   },
 
-  suggest: {},
+  suggest: {
+    margin: '0.2rem'
+  },
 
   suggestButton: {
-    border: 'none'
+    border: 'none',
+    margin: '0.2rem'
   },
 
   footer: {

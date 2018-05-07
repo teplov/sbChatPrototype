@@ -6,7 +6,9 @@ const avatarSize = 40;
 
 let theme = StyleSheet.create({
   window: {
-    border: 'none',
+    backgroundColor: '#F8F8F8',
+    border: '2px solid #189F29',
+    borderRadius: '6px',
     minWidth: '360px',
     maxWidth: '300px',
     width: '320px',
@@ -21,8 +23,6 @@ let theme = StyleSheet.create({
     color: '#fff',
     backgroundColor: '#189F29',
     borderBottom: 'none',
-    borderTopLeftRadius: '6px',
-    borderTopRightRadius: '6px',
     textAlign: 'left'
   },
 
@@ -33,9 +33,6 @@ let theme = StyleSheet.create({
   },
 
   body: {
-    backgroundColor: '#F8F8F8',
-    borderLeft: '2px solid #189F29',
-    borderRight: '2px solid #189F29',
     display: 'flex',
     flexDirection: 'column'
   },
@@ -62,12 +59,7 @@ let theme = StyleSheet.create({
   },
 
   footer: {
-    borderTop: '1px inset #eee',
-    borderLeft: '2px solid green',
-    borderRight: '2px solid green',
-    borderBottom: '2px solid green',
-    borderBottomLeftRadius: '6px',
-    borderBottomRightRadius: '6px'
+    borderTop: '1px inset #eee'
   },
 
   operatorTitle: {
@@ -150,19 +142,16 @@ let theme = StyleSheet.create({
   },
 
   suggest: {
-    backgroundColor: '#F8F8F8',
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    borderLeft: '2px solid #189F29',
-    borderRight: '2px solid #189F29',
     alignItems: 'center'
   },
 
   suggestButton: {
     flexGrow: 1,
-    backgroundColor: '#ddd',
+    backgroundColor: '#f3f3f3',
     borderRadius: '4px',
     //boxShadow: '0 2px 4px rgba(0,0,0,.15)',
     height: '32px',

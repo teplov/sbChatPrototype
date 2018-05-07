@@ -1,8 +1,8 @@
-import React from 'react';
-import theme from '../themes';
-import Button from '../components/Button';
-import { styles, css } from './styles.js';
-import suggest from '/data/suggest.js';
+import React from "react";
+import theme from "../themes";
+import Button from "../components/Button";
+import { styles, css } from "./styles.js";
+import suggest from "../data/suggest.js";
 
 export default class Suggest extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export default class Suggest extends React.Component {
   textSuggest(text, index) {
     return (
       <Button
-        key={'suggest_' + index}
+        key={"suggest_" + index}
         text={text}
         themeStyle={[
           styles.suggestButton,
@@ -27,7 +27,7 @@ export default class Suggest extends React.Component {
   iconSuggest(sign, index) {
     return (
       <Button
-        key={'suggest_' + index}
+        key={"suggest_" + index}
         sign={sign}
         color="white"
         size="20"

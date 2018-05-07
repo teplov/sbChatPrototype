@@ -68,18 +68,41 @@ let theme = StyleSheet.create({
   },
 
   bubble: {
-    padding: '10px 15px',
+    display: 'table',
+    borderCollapse: 'collapse',
+    //flexDirection: 'column',
     textAlign: 'left',
-    maxWidth: '60%',
+    maxWidth: '70%',
     minWidth: '20%',
     fontSize: '0.9rem'
   },
 
+  bubbleText: {
+    margin: '10px 10px'
+    // flex: 1,
+    // flexGrow: 0,
+    // flexShrink: 0
+  },
+
+  bubbleButtons: {
+    //flex: 1,
+    padding: 0,
+    display: 'table-row'
+  },
+
   bubbleButton: {
-    backgroundColor: '#666',
-    borderRadius: '10px',
-    height: '32px',
-    color: '#eee',
+    display: 'table-cell',
+    boxSizing: 'border-box',
+    padding: 0,
+    margin: 0,
+    backgroundColor: '#fff',
+    border: '1px solid #DBDBDB',
+    borderRadius: '0px',
+    height: '40px',
+    width: '100%',
+    color: '#000',
+    textIndent: '10px',
+    textAlign: 'left',
     fontSize: '14px',
     ':hover': {
       backgroundColor: '#999'
@@ -138,6 +161,7 @@ let theme = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    itemGap: '6px',
     justifyContent: 'space-evenly',
     alignItems: 'center'
   },
@@ -146,9 +170,7 @@ let theme = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: '#eee',
     borderRadius: '10px',
-    //boxShadow: '0 2px 4px rgba(0,0,0,.15)',
     height: '32px',
-    margin: '6px',
     minWidth: '10%',
     color: '#333',
     fontSize: '14px',

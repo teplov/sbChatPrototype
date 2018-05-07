@@ -6,20 +6,40 @@ import Body from './Body';
 import theme from '../themes';
 import { styles, css } from './styles.js';
 
+import { config } from '../config.js';
+
 export default class Container extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
   }
-  render() {
+
+  sbolContainer() {
     return (
       <div className={css(styles.window, theme.window)}>
-        <Header title={this.props.headerTitle} />
+        <Header />
         <Body />
         <Suggest />
         <Footer />
       </div>
     );
+  }
+
+  siteContainer() {
+    return (
+      <div className={css(styles.window, theme.window)}>
+        <Header />
+        <Body />
+        <Suggest />
+        <Footer />
+      </div>
+    );
+  }
+
+  render() {
+    return config.theme === 'site'
+      ? this.siteContainer()
+      : this.sbolContainer();
   }
 }
 
