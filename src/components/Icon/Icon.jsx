@@ -119,6 +119,15 @@ export class ChatIcons extends React.Component {
             </g>
           </g>
         </symbol>
+        <symbol id="close">
+          <path
+            fill="currentColor"
+            d="M6,4.57404357 L1.72275218,0.296795747 C1.32616461,-0.0997918243 0.689941269,-0.0975927221 0.296174273,0.296174273 C-0.100337993,0.69268654 -0.097314479,1.32864195 0.296795747,1.72275218 L4.57404357,6 L0.296795747,10.2772478 C-0.0997918243,10.6738354 -0.0975927221,11.3100587 0.296174273,11.7038257 C0.69268654,12.100338 1.32864195,12.0973145 1.72275218,11.7032043 L6,7.42595643 L10.2772478,11.7032043 C10.6738354,12.0997918 11.3100587,12.0975927 11.7038257,11.7038257 C12.100338,11.3073135 12.0973145,10.671358 11.7032043,10.2772478 L7.42595643,6 L11.7032043,1.72275218 C12.0997918,1.32616461 12.0975927,0.689941269 11.7038257,0.296174273 C11.3073135,-0.100337993 10.671358,-0.097314479 10.2772478,0.296795747 L6,4.57404357 Z"
+          />
+        </symbol>
+        <symbol id="minimize">
+          <rect x="0" y="10" width="12" height="2" rx="1" fill="currentColor" />
+        </symbol>
       </svg>
     );
   }
@@ -133,109 +142,43 @@ export default class Icon extends React.Component {
   icon(sign, color, size) {
     switch (sign) {
       case 'logo':
-        return (
-          <svg
-            viewBox="0 0 22 22"
-            style={{ fill: color, color: color }}
-            width={size || 20}
-            height={size || 20}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '0 0 22 22', color, 20);
       case 'logo2':
-        return (
-          <svg
-            viewBox="0 0 32 32"
-            style={{ fill: color, color: color }}
-            width={size || 20}
-            height={size || 20}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '0 0 32 32', color, 20);
       case 'sendArrow':
-        return (
-          <svg
-            viewBox="0 0 19 20"
-            style={{ fill: color, color: color }}
-            //className={css(styles.red)}
-            width={size || 20}
-            height={size || 20}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '0 0 19 20', color, 20);
       case 'sendRound':
-        return (
-          <svg
-            viewBox="0 0 25 25"
-            style={{ fill: color, color: color }}
-            //className={css(styles.red)}
-            width={size || 20}
-            height={size || 20}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '0 0 25 25', color, 20);
       case 'statusWait':
-        return (
-          <svg
-            viewBox="1 1 11 11"
-            style={{ fill: color, color: color }}
-            width={size || 12}
-            height={size || 12}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '1 1 11 11', color, 12);
       case 'statusError':
-        return (
-          <svg
-            viewBox="1 1 11 11"
-            style={{ fill: color, color: color }}
-            width={size || 12}
-            height={size || 12}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '1 1 11 11', color, 12);
       case 'statusSend':
-        return (
-          <svg
-            viewBox="1 1 12 12"
-            style={{ fill: color, color: color }}
-            width={size || 12}
-            height={size || 12}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '1 1 12 12', color, 12);
       case 'statusOk':
-        return (
-          <svg
-            viewBox="1 1 12 12"
-            style={{ fill: color, color: color }}
-            width={size || 12}
-            height={size || 12}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '1 1 12 12', color, 12);
       case 'speechBubbles':
-        return (
-          <svg
-            viewBox="0 0 21 19"
-            style={{ fill: color, color: color }}
-            width={size || 30}
-            height={size || 30}
-          >
-            <use xlinkHref={'#' + sign} />
-          </svg>
-        );
+        return this.svgDecorator(sign, '0 0 21 19', color, 30);
+      case 'close':
+        return this.svgDecorator(sign, '0 0 12 12', color, 12);
+      case 'minimize':
+        return this.svgDecorator(sign, '0 0 12 12', color, 12);
       default:
         return this.props.children;
     }
+  }
+
+  svgDecorator(sign, viewBox, color, size) {
+    return (
+      <svg
+        viewBox={viewBox}
+        style={{ fill: color, color: color }}
+        width={size || 30}
+        height={size || 30}
+      >
+        <use xlinkHref={'#' + sign} />
+      </svg>
+    );
   }
 
   render() {

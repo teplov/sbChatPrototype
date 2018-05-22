@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
         />
         <Button
           text="Send"
-          sign={config[config.theme].sendButtonSign}
+          sign={config[config.theme].close}
           color={
             store.getState()
               ? config[config.theme].primaryColor

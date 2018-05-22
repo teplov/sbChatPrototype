@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   },
 
   bubbleButtons: {
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
     margin: '10px 0px'
   },
 

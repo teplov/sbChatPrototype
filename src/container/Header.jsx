@@ -1,9 +1,9 @@
-import React from "react";
-import theme from "../themes";
-import Button from "../components/Button";
-import { styles, css } from "./styles.js";
+import React from 'react';
+import theme from '../themes';
+import Button from '../components/Button';
+import { styles, css } from './styles.js';
 
-import { config } from "../config.js";
+import { config } from '../config.js';
 
 export default class Header extends React.Component {
   constructor(props) {
