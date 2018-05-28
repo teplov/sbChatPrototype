@@ -44,6 +44,12 @@ export class ChatIcons extends React.Component {
             />
           </g>
         </symbol>
+        <symbol id="sendArrow2">
+          <path
+            fill="currentColor"
+            d="M17.4022614,8.83837991 L1.40571843,15.9143804 C0.900641592,16.1377989 0.310079423,15.9094697 0.0866609049,15.4043929 C0.0194495634,15.2524498 -0.00884475683,15.0861547 0.00433455311,14.9205336 L0.475597772,8.99828489 L10.2409079,7.9138807 L0.475597772,7.0026346 L0.00339303239,1.07936662 C-0.0404960334,0.528828527 0.370224156,0.0469501024 0.920762252,0.0030610366 C1.08373173,-0.00993093998 1.24740116,0.0172314179 1.39743748,0.0821694144 L17.3949335,7.00612837 C17.9017812,7.22549977 18.1348268,7.8142167 17.9154554,8.32106444 C17.8155419,8.55191017 17.6323006,8.7366231 17.4022614,8.83837991 Z"
+          />
+        </symbol>
         <symbol id="sendRound">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <circle fill="currentColor" cx="12.5" cy="12.5" r="12.5" />
@@ -142,27 +148,29 @@ export default class Icon extends React.Component {
   icon(sign, color, size) {
     switch (sign) {
       case 'logo':
-        return this.svgDecorator(sign, '0 0 22 22', color, 20);
+        return this.svgDecorator(sign, '0 0 22 22', color, size);
       case 'logo2':
-        return this.svgDecorator(sign, '0 0 32 32', color, 20);
+        return this.svgDecorator(sign, '0 0 32 32', color, size);
       case 'sendArrow':
-        return this.svgDecorator(sign, '0 0 19 20', color, 20);
+        return this.svgDecorator(sign, '0 0 19 20', color, size);
+      case 'sendArrow2':
+        return this.svgDecorator(sign, '0 0 18 16', color, size);
       case 'sendRound':
-        return this.svgDecorator(sign, '0 0 25 25', color, 20);
+        return this.svgDecorator(sign, '0 0 25 25', color, size);
       case 'statusWait':
-        return this.svgDecorator(sign, '1 1 11 11', color, 12);
+        return this.svgDecorator(sign, '1 1 11 11', color, size);
       case 'statusError':
-        return this.svgDecorator(sign, '1 1 11 11', color, 12);
+        return this.svgDecorator(sign, '1 1 11 11', color, size);
       case 'statusSend':
-        return this.svgDecorator(sign, '1 1 12 12', color, 12);
+        return this.svgDecorator(sign, '1 1 12 12', color, size);
       case 'statusOk':
-        return this.svgDecorator(sign, '1 1 12 12', color, 12);
+        return this.svgDecorator(sign, '1 1 12 12', color, size);
       case 'speechBubbles':
-        return this.svgDecorator(sign, '0 0 21 19', color, 30);
+        return this.svgDecorator(sign, '0 0 21 19', color, size);
       case 'close':
-        return this.svgDecorator(sign, '0 0 12 12', color, 12);
+        return this.svgDecorator(sign, '0 0 12 12', color, size);
       case 'minimize':
-        return this.svgDecorator(sign, '0 0 12 12', color, 12);
+        return this.svgDecorator(sign, '0 0 12 12', color, size);
       default:
         return this.props.children;
     }

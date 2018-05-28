@@ -23,13 +23,13 @@ export default class Header extends React.Component {
         <Button
           sign="minimize"
           color="white"
-          size="20"
+          size="16"
           themeStyle={theme.headerIcon}
         />
         <Button
           sign="close"
           color="white"
-          size="20"
+          size="16"
           themeStyle={theme.headerIcon}
         />
       </div>

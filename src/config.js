@@ -21,8 +21,8 @@ const config = {
     secondaryColor: '#eee',
     hoverColor: 'green',
     disabledColor: '#ccc',
-    sendButtonSign: 'sendRound',
-    sendButtonSize: 25
+    sendButtonSign: 'sendArrow2',
+    sendButtonSize: 18
   }
 };
 

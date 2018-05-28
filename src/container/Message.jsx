@@ -59,6 +59,7 @@ export default class Message extends React.Component {
               themeStyle={theme.bubbleStatus || styles.bubbleStatus}
               sign="statusOk"
               color="green"
+              size="16"
             />
           )}
         </Bubble>
@@ -95,6 +96,7 @@ export default class Message extends React.Component {
               themeStyle={theme.bubbleStatus}
               sign="statusSend"
               color="grey"
+              size="16"
             />
           )}
         </Bubble>
@@ -125,6 +127,7 @@ export default class Message extends React.Component {
               themeStyle={theme.bubbleStatus}
               sign="statusError"
               color="red"
+              size="16"
             />
           )}
         </Bubble>
@@ -154,6 +157,7 @@ export default class Message extends React.Component {
               themeStyle={theme.bubbleStatus || styles.bubbleStatus}
               sign="statusWait"
               color="grey"
+              size="16"
             />
           )}
         </Bubble>
